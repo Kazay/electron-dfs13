@@ -1,45 +1,33 @@
-# electron-quick-start
+# Validation Electron DFS13 - Czaja Kevin
 
-**Clone and run for a quick way to see Electron in action.**
+## Installation :
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+La lib gm requiert une installation de ImageMagick 6.x
+> https://legacy.imagemagick.org/
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+Si votre version est ImageMagick 7.x+,
+> https://imagemagick.org/
 
-A basic Electron application needs just these files:
+il faut modifier la ligne :
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
+```
+var fs = require('fs')
+  , gm = require('gm').subClass({imageMagick: true});
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+par:
 
-## Resources for Learning Electron
+```
+var fs = require('fs')
+  , gm = require('gm').subClass({imageMagick: 7+});
+```
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+Pour finir :
+> npm install && npm start
 
-## License
+## NB : 
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+Pour le moment, l'app ne fonctionne que sur des images au format paysage et carré, pas le format portrait.
+
+Pas de border-radius ni de couleur de BG, prise en main compliquée de la lib gm mais les paramètres sont quand mêmes passés dans le main juste avant le rendu de l'image.
+Avec une meilleure compréhension de la lib, on a donc les données prêtes pour avoir ces modifications.

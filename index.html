@@ -12,17 +12,72 @@
   </head>
   <body>
     <div class="wrapper">
-		<div class="options">OPTIONS</div>
-		<div class="content">CONTENT</div>
+		<div id="options" class="options container">
+			<div class="add">
+				<div class="option-title">Select an image</div>
+				<div class="upload-container">
+					<i class="fas fa-file-upload fa-4x"></i>
+					<input type="file" name="imageFile" id="imageFile" accept="image/*">
+				</div>
+			</div>
+			<div class="size">
+				<div class="option-title">Dimensions</div>
+				<div class="form-group">
+					<input type="range" class="form-control-range" id="range" min="16" max="640" disabled>
+				</div>
+				<div class="form-group row">
+					<label for="inputWidth" class="col-sm-1 col-form-label">W</label>
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="width" placeholder="width" min="16" max="640" disabled>
+					</div>
+					<label for="inputHeight" class="col-sm-1 col-form-label">H</label>
+					<div class="col-sm-5">
+						<input type="number" class="form-control" id="height" placeholder="height" min="16" max="640" disabled>
+					</div>
+				</div>
+			</div>
+			<div class="angles">
+				<div class="option-title">Angles</div>
+				<div class="form-group angles-container">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="borderOptions" id="borderStraight" value="straight" checked>
+						<label class="form-check-label" for="borderOptions">Straight</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="borderOptions" id="borderRounded" value="rounded">
+						<label class="form-check-label" for="borderOptions">Rounded</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="borderOptions" id="borderCircle" value="circle">
+						<label class="form-check-label" for="borderOptions">Circle</label>
+					</div>
+				</div>
+			</div>
+			<div class="background">
+				<div class="option-title">Background</div>
+				<div class="form-group background-container">
+					<input type="color" id="color" name="backgroundColor" value="#ff0000">
+				</div>
+			</div>
+			<div class="validate-container">
+				<button type="button" id="btnResize" class="btn-resize btn btn-primary">Resize</button>
+			</div>
+		</div>
+		<div class="content">
+			<div class="image-container">
+				<img id="imagePreview" />
+			</div>
+			<img class="logo float-left fixed-bottom" src="images/it-akademy.png">
+			<div class="clearfix"></div>
+		</div>
 	</div>
+	
+	<script>
+
+	
+	</script>
 
     <!-- you can also require other files to run in this process -->
 	<script src="./renderer.js"></script>
-	<!-- stash lib for offline storage -->
-	<script src="https://rezitech.github.com/stash/stash.min.js"></script>
-	<!-- jQuery CDN // required for bootstrap -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<!-- bootstrap js bundle (including popper) -->
-	<script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

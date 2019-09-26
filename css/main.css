@@ -7,14 +7,46 @@
 .content {
 	grid-row-start: 1;
 	grid-column: span 8;
-	background-color: green;
+	background-color: whitesmoke;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .options {
 	grid-column: span 4;
-	background-color: red;
 	height: 100vh;
+
+}
+
+	.option-title {
+		font-weight: 600;
+		font-size: 1.6rem;
+		padding-bottom: 2rem;
+	}
+
+	.add, .size, .angles, .background {margin-top: 3rem;}
+	.btn-resize {margin: 3rem auto 0}
+
+	
+	.validate-container, .upload-container, .angles-container, .background-container {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.upload-container {
+		align-items: center;
+	}
+	
+	.upload-container > input[type="file"] {
+		margin-left: 2rem;
+	}
+
+.logo {
+	margin: 50px;
+	height: 100px;
+	width: 100px;
 }
 
 @media screen and (max-width: 680px) {
