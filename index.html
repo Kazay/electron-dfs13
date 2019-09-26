@@ -2,15 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+	<title>Hello World!</title>
+	<!-- bootstrap css lib -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- override bootstrap & custom css -->
+	<link rel="stylesheet" href="./css/main.css">
+	<!-- fontawesome icons -->
+	<script src="https://kit.fontawesome.com/1114378451.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="wrapper">
+		<div class="header">HEADER</div>
+		<div class="menu">MENU</div>
+		<div class="content">CONTENT</div>
+		<div class="footer">FOOTER</div>
+	</div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <!-- you can also require other files to run in this process -->
+	<script src="./renderer.js"></script>
+	<!-- stash lib for offline storage -->
+	<script src="https://rezitech.github.com/stash/stash.min.js"></script>
+	<!-- jQuery CDN // required for bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- bootstrap js bundle (including popper) -->
+	<script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
