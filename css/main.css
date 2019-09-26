@@ -4,33 +4,30 @@
 	grid-template-rows: 40px 100px 40px;
 }
 
-.header {
-	grid-column: span 12;
-}
-
-.menu {
-	grid-column: span 4;
-}
-
 .content {
+	grid-row-start: 1;
 	grid-column: span 8;
+	background-color: green;
+	height: 100vh;
 }
 
-.footer {
-	grid-column: span 12;
+.options {
+	grid-column: span 4;
+	background-color: red;
+	height: 100vh;
 }
 
 @media screen and (max-width: 680px) {
-	.header {
-		grid-column: span 6;
-	}
 	
-	.menu {
+	.options {
 		grid-row: 1;
-		grid-column: span 6;
+		grid-column: span 12;
+		height: auto;
 	}
 	
 	.content {
+		grid-row: 2;
 		grid-column: span 12;
+		height: auto;
 	}
 }
